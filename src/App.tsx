@@ -11,11 +11,13 @@ import Projects from "./pages/Projects";
 import Experience from "./pages/Experience";
 import News from "./pages/News";
 import Contact from "./pages/Contact";
+import ScrollToTop from "./utils/ScrollToTop";
 
 const App: React.FC = () => {
   return (
     <ThemeProvider theme={theme}>
       <GlobalStyle />
+      <ScrollToTop /> {/* Add ScrollToTop component here */}
       <Navbar />
       <Routes>
         <Route path="/" element={<Home />} />
