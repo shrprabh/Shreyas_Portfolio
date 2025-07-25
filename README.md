@@ -36,7 +36,13 @@ A clean, modern portfolio website built with React and TypeScript, showcasing pr
 
 ## Deployment
 
-The portfolio is deployed using GitHub Pages at [https://shrprabh.github.io/Portfolio/](https://shrprabh.github.io/Portfolio/)
+The portfolio is automatically deployed using GitHub Actions to GitHub Pages at [https://shrprabh.github.io/Portfolio/](https://shrprabh.github.io/Portfolio/)
+
+### CI/CD Workflow
+
+This project uses GitHub Actions for continuous integration and deployment:
+- When code is pushed to the `main` branch, GitHub Actions automatically builds and deploys the site
+- The workflow can also be triggered manually from the Actions tab in GitHub
 
 ## Connect with Me
 
