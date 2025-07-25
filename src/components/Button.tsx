@@ -41,7 +41,7 @@ const StyledButton = styled(motion.button)<ButtonProps>`
   cursor: pointer;
   transition: all 0.3s ease;
   white-space: nowrap;
-  
+
   @media (max-width: ${(props) => props.theme.breakpoints.sm}) {
     font-size: ${(props) => {
       switch (props.size) {
@@ -89,7 +89,7 @@ const Button: React.FC<ButtonProps> = ({
       type={type}
       whileHover={{ scale: 1.05 }}
       whileTap={{ scale: 0.95 }}
-      style={{ width: '100%' }}  // Make button width 100% to improve mobile responsiveness
+      style={{ width: "100%" }} // Make button width 100% to improve mobile responsiveness
     >
       {children}
     </StyledButton>

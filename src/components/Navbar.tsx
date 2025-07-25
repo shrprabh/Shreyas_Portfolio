@@ -16,11 +16,11 @@ const Nav = styled.nav`
   background-color: rgba(255, 255, 255, 0.95);
   box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
   backdrop-filter: blur(10px);
-  
+
   @media (max-width: ${(props) => props.theme.breakpoints.md}) {
     padding: 1.2rem 1.5rem;
   }
-  
+
   @media (max-width: ${(props) => props.theme.breakpoints.sm}) {
     padding: 1rem 1.2rem;
   }

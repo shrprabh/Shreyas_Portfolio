@@ -26,12 +26,12 @@ const HeroSection = styled.section`
       opacity: 0.5;
     }
   }
-  
+
   @media (max-width: ${(props) => props.theme.breakpoints.md}) {
     padding: 120px 0 40px; /* Increased top padding to prevent header overlap */
     align-items: flex-start; /* Align content at the top on mobile */
   }
-  
+
   @media (max-width: ${(props) => props.theme.breakpoints.sm}) {
     padding: 100px 0 30px;
   }
@@ -52,7 +52,7 @@ const HeroContent = styled.div`
     gap: 2rem;
     padding-top: 1rem; /* Add some space at the top for mobile */
   }
-  
+
   @media (max-width: ${(props) => props.theme.breakpoints.sm}) {
     padding: 0 1.5rem;
     gap: 1.5rem;
@@ -73,7 +73,7 @@ const Greeting = styled(motion.p)`
   font-size: 1.2rem;
   color: ${(props) => props.theme.colors.secondary};
   margin-bottom: 1rem;
-  
+
   @media (max-width: ${(props) => props.theme.breakpoints.sm}) {
     font-size: 1rem;
     margin-bottom: 0.75rem;
@@ -89,7 +89,7 @@ const Name = styled(motion.h1)`
   @media (max-width: ${(props) => props.theme.breakpoints.md}) {
     font-size: 2.5rem;
   }
-  
+
   @media (max-width: ${(props) => props.theme.breakpoints.sm}) {
     font-size: 2rem;
     margin-bottom: 0.75rem;
@@ -104,7 +104,7 @@ const Role = styled(motion.h2)`
   @media (max-width: ${(props) => props.theme.breakpoints.md}) {
     font-size: 1.5rem;
   }
-  
+
   @media (max-width: ${(props) => props.theme.breakpoints.sm}) {
     font-size: 1.2rem;
     margin-bottom: 1rem;
@@ -121,7 +121,7 @@ const Description = styled(motion.p)`
   @media (max-width: ${(props) => props.theme.breakpoints.md}) {
     margin: 0 auto 1.5rem;
   }
-  
+
   @media (max-width: ${(props) => props.theme.breakpoints.sm}) {
     font-size: 1rem;
     line-height: 1.6;
@@ -136,7 +136,7 @@ const ButtonGroup = styled(motion.div)`
   @media (max-width: ${(props) => props.theme.breakpoints.md}) {
     justify-content: center;
   }
-  
+
   @media (max-width: ${(props) => props.theme.breakpoints.sm}) {
     gap: 0.75rem;
     flex-wrap: wrap;
@@ -182,7 +182,7 @@ const HeroImage = styled(motion.div)`
     height: 280px;
     margin-top: 1rem; /* Add space above image to prevent header overlap */
   }
-  
+
   @media (max-width: ${(props) => props.theme.breakpoints.sm}) {
     max-width: 220px;
     height: 220px;
@@ -257,7 +257,10 @@ const Home: React.FC = () => {
         <HeroImage
           initial={{ opacity: 0, scale: 0.9 }}
           animate={{ opacity: 1, scale: 1 }}
-          transition={{ duration: 0.5, delay: 0.3 }} /* Reduced delay for smoother mobile experience */
+          transition={{
+            duration: 0.5,
+            delay: 0.3,
+          }} /* Reduced delay for smoother mobile experience */
         >
           <img
             src={`${process.env.PUBLIC_URL}/images/profile.jpg`}
