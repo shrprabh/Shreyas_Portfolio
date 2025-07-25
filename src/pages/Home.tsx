@@ -28,11 +28,12 @@ const HeroSection = styled.section`
   }
   
   @media (max-width: ${(props) => props.theme.breakpoints.md}) {
-    padding: 80px 0 40px;
+    padding: 120px 0 40px; /* Increased top padding to prevent header overlap */
+    align-items: flex-start; /* Align content at the top on mobile */
   }
   
   @media (max-width: ${(props) => props.theme.breakpoints.sm}) {
-    padding: 60px 0 30px;
+    padding: 100px 0 30px;
   }
 `;
 
@@ -49,10 +50,12 @@ const HeroContent = styled.div`
     flex-direction: column-reverse;
     text-align: center;
     gap: 2rem;
+    padding-top: 1rem; /* Add some space at the top for mobile */
   }
   
   @media (max-width: ${(props) => props.theme.breakpoints.sm}) {
     padding: 0 1.5rem;
+    gap: 1.5rem;
   }
 `;
 
@@ -159,6 +162,7 @@ const HeroImage = styled(motion.div)`
   display: flex;
   justify-content: center;
   align-items: center;
+  margin-top: 0;
 
   img {
     width: 100%;
@@ -176,12 +180,14 @@ const HeroImage = styled(motion.div)`
   @media (max-width: ${(props) => props.theme.breakpoints.md}) {
     max-width: 280px;
     height: 280px;
+    margin-top: 1rem; /* Add space above image to prevent header overlap */
   }
   
   @media (max-width: ${(props) => props.theme.breakpoints.sm}) {
     max-width: 220px;
     height: 220px;
     border-width: 4px;
+    margin-top: 0.5rem;
   }
 `;
 
@@ -251,11 +257,12 @@ const Home: React.FC = () => {
         <HeroImage
           initial={{ opacity: 0, scale: 0.9 }}
           animate={{ opacity: 1, scale: 1 }}
-          transition={{ duration: 0.5, delay: 0.6 }}
+          transition={{ duration: 0.5, delay: 0.3 }} /* Reduced delay for smoother mobile experience */
         >
           <img
             src={`${process.env.PUBLIC_URL}/images/profile.jpg`}
             alt="Shreyas Prabhakar"
+            loading="eager" /* Ensure image loads as quickly as possible */
           />
         </HeroImage>
       </HeroContent>
