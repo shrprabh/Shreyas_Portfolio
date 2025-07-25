@@ -40,6 +40,30 @@ const StyledButton = styled(motion.button)<ButtonProps>`
   font-weight: 600;
   cursor: pointer;
   transition: all 0.3s ease;
+  white-space: nowrap;
+  
+  @media (max-width: ${(props) => props.theme.breakpoints.sm}) {
+    font-size: ${(props) => {
+      switch (props.size) {
+        case "small":
+          return "0.7rem";
+        case "large":
+          return "1rem";
+        default:
+          return "0.9rem";
+      }
+    }};
+    padding: ${(props) => {
+      switch (props.size) {
+        case "small":
+          return "0.4rem 0.8rem";
+        case "large":
+          return "0.8rem 1.8rem";
+        default:
+          return "0.6rem 1.5rem";
+      }
+    }};
+  }
 
   &:hover {
     background-color: ${(props) =>
@@ -65,6 +89,7 @@ const Button: React.FC<ButtonProps> = ({
       type={type}
       whileHover={{ scale: 1.05 }}
       whileTap={{ scale: 0.95 }}
+      style={{ width: '100%' }}  // Make button width 100% to improve mobile responsiveness
     >
       {children}
     </StyledButton>

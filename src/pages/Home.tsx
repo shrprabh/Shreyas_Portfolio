@@ -5,10 +5,10 @@ import { Link } from "react-router-dom";
 import Button from "../components/Button";
 
 const HeroSection = styled.section`
-  height: 100vh;
+  min-height: 100vh;
   display: flex;
   align-items: center;
-  padding-top: 80px;
+  padding: 100px 0 50px;
   position: relative;
 
   &:after {
@@ -26,6 +26,14 @@ const HeroSection = styled.section`
       opacity: 0.5;
     }
   }
+  
+  @media (max-width: ${(props) => props.theme.breakpoints.md}) {
+    padding: 80px 0 40px;
+  }
+  
+  @media (max-width: ${(props) => props.theme.breakpoints.sm}) {
+    padding: 60px 0 30px;
+  }
 `;
 
 const HeroContent = styled.div`
@@ -35,19 +43,26 @@ const HeroContent = styled.div`
   display: flex;
   align-items: center;
   justify-content: space-between;
+  width: 100%;
 
   @media (max-width: ${(props) => props.theme.breakpoints.md}) {
     flex-direction: column-reverse;
     text-align: center;
-    padding-top: 2rem;
+    gap: 2rem;
+  }
+  
+  @media (max-width: ${(props) => props.theme.breakpoints.sm}) {
+    padding: 0 1.5rem;
   }
 `;
 
 const HeroText = styled.div`
   flex: 1;
+  max-width: 600px;
 
   @media (max-width: ${(props) => props.theme.breakpoints.md}) {
-    margin-top: 2rem;
+    margin-top: 1.5rem;
+    max-width: 100%;
   }
 `;
 
@@ -55,6 +70,11 @@ const Greeting = styled(motion.p)`
   font-size: 1.2rem;
   color: ${(props) => props.theme.colors.secondary};
   margin-bottom: 1rem;
+  
+  @media (max-width: ${(props) => props.theme.breakpoints.sm}) {
+    font-size: 1rem;
+    margin-bottom: 0.75rem;
+  }
 `;
 
 const Name = styled(motion.h1)`
@@ -66,6 +86,11 @@ const Name = styled(motion.h1)`
   @media (max-width: ${(props) => props.theme.breakpoints.md}) {
     font-size: 2.5rem;
   }
+  
+  @media (max-width: ${(props) => props.theme.breakpoints.sm}) {
+    font-size: 2rem;
+    margin-bottom: 0.75rem;
+  }
 `;
 
 const Role = styled(motion.h2)`
@@ -75,6 +100,11 @@ const Role = styled(motion.h2)`
 
   @media (max-width: ${(props) => props.theme.breakpoints.md}) {
     font-size: 1.5rem;
+  }
+  
+  @media (max-width: ${(props) => props.theme.breakpoints.sm}) {
+    font-size: 1.2rem;
+    margin-bottom: 1rem;
   }
 `;
 
@@ -86,7 +116,13 @@ const Description = styled(motion.p)`
   line-height: 1.8;
 
   @media (max-width: ${(props) => props.theme.breakpoints.md}) {
-    margin: 0 auto 2rem;
+    margin: 0 auto 1.5rem;
+  }
+  
+  @media (max-width: ${(props) => props.theme.breakpoints.sm}) {
+    font-size: 1rem;
+    line-height: 1.6;
+    margin-bottom: 1.25rem;
   }
 `;
 
@@ -97,10 +133,23 @@ const ButtonGroup = styled(motion.div)`
   @media (max-width: ${(props) => props.theme.breakpoints.md}) {
     justify-content: center;
   }
+  
+  @media (max-width: ${(props) => props.theme.breakpoints.sm}) {
+    gap: 0.75rem;
+    flex-wrap: wrap;
+    margin: 0 auto;
+    max-width: 100%;
+  }
+`;
+
+const ButtonWrapper = styled.div`
+  @media (max-width: ${(props) => props.theme.breakpoints.sm}) {
+    margin-bottom: 0.5rem;
+  }
 `;
 
 const HeroImage = styled(motion.div)`
-  flex: 1;
+  flex: 0.8;
   max-width: 400px;
   height: 400px;
   border-radius: 50%;
@@ -127,6 +176,12 @@ const HeroImage = styled(motion.div)`
   @media (max-width: ${(props) => props.theme.breakpoints.md}) {
     max-width: 280px;
     height: 280px;
+  }
+  
+  @media (max-width: ${(props) => props.theme.breakpoints.sm}) {
+    max-width: 220px;
+    height: 220px;
+    border-width: 4px;
   }
 `;
 
@@ -175,15 +230,21 @@ const Home: React.FC = () => {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5, delay: 0.4 }}
           >
-            <Link to="/projects">
-              <Button primary>View Projects</Button>
-            </Link>
-            <Link to="/experience">
-              <Button>My Experience</Button>
-            </Link>
-            <Link to="/contact">
-              <Button>Get in Touch</Button>
-            </Link>
+            <ButtonWrapper>
+              <Link to="/projects">
+                <Button primary>View Projects</Button>
+              </Link>
+            </ButtonWrapper>
+            <ButtonWrapper>
+              <Link to="/experience">
+                <Button>My Experience</Button>
+              </Link>
+            </ButtonWrapper>
+            <ButtonWrapper>
+              <Link to="/contact">
+                <Button>Get in Touch</Button>
+              </Link>
+            </ButtonWrapper>
           </ButtonGroup>
         </HeroText>
 
