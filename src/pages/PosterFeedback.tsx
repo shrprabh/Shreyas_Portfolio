@@ -27,7 +27,10 @@ const PosterFeedback: React.FC = () => (
         A Graphical User Interface for Visualizing Performance Data at NERSC
       </h2>
       <p style={{ marginBottom: "1.2rem", color: "#555", fontSize: "1.08rem" }}>
-        Thank you for visiting my poster at the 2025 CS Summer Poster Session (NERSC, Berkeley). I would be grateful if you could kindly share your thoughts or suggestions about my work. Your feedback is highly appreciated!
+        Thank you for visiting my poster at the 2025 CS Summer Poster Session
+        (NERSC, Berkeley). I would be grateful if you could kindly share your
+        thoughts or suggestions about my work. Your feedback is highly
+        appreciated!
       </p>
       <form
         action="https://formspree.io/f/meozrgpa"
@@ -55,6 +58,30 @@ const PosterFeedback: React.FC = () => (
               borderRadius: "5px",
               border: "1px solid #ccc",
             }}
+          />
+        </div>
+        <div style={{ marginBottom: "1rem" }}>
+          <label
+            htmlFor="poster-feedback-email"
+            style={{
+              display: "block",
+              marginBottom: "0.5rem",
+              fontWeight: 500,
+            }}
+          >
+            Email (optional)
+          </label>
+          <input
+            type="email"
+            id="poster-feedback-email"
+            name="email"
+            style={{
+              width: "100%",
+              padding: "0.7rem",
+              borderRadius: "5px",
+              border: "1px solid #ccc",
+            }}
+            placeholder="Your email address if you'd like me to follow up"
           />
         </div>
         <div style={{ marginBottom: "1rem" }}>
