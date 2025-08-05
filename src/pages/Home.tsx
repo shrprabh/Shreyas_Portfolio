@@ -273,4 +273,19 @@ const Home: React.FC = () => {
   );
 };
 
-export default Home;
+const LastUpdated = styled.p`
+  text-align: center;
+  font-size: 0.95rem;
+  color: ${(props) => props.theme.colors.secondary};
+  margin-top: 2.5rem;
+  margin-bottom: 0.5rem;
+`;
+
+const HomeWithUpdate: React.FC = () => (
+  <>
+    <Home />
+    <LastUpdated>Last updated: August 5, 2025</LastUpdated>
+  </>
+);
+
+export default HomeWithUpdate;

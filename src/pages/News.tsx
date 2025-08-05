@@ -238,6 +238,21 @@ const News: React.FC = () => {
   // Timeline of events and updates
   const newsItems: NewsItem[] = [
     {
+      date: "August 5, 2025",
+      title: "2025 CS Summer Poster Session",
+      location: "Berkeley, California",
+      description:
+        "Demonstrated my work on the creation of a user interface for performance data visualization at NERSC. Poster: 'A Graphical User Interface for Visualizing Performance Data at NERSC'. Authors: Shreyas Prabhakar¹,²,³, Dhruva Kulkarni²,³, Scott Classen³, Jack Deslippe²,³. ¹Texas Tech University, ²National Energy Research Scientific Computing Center (NERSC), ³Lawrence Berkeley National Laboratory.",
+      type: "presentation",
+      tags: [
+        "Poster",
+        "NERSC",
+        "User Interface",
+        "Performance Data",
+        "Mentors",
+      ],
+    },
+    {
       date: "May 19-24, 2025",
       title: "Attended Solana Scale or Die and Ship and Die Conference",
       location: "New York, NY",

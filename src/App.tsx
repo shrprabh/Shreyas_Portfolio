@@ -11,6 +11,7 @@ import Projects from "./pages/Projects";
 import Experience from "./pages/Experience";
 import News from "./pages/News";
 import Contact from "./pages/Contact";
+import PosterFeedback from "./pages/PosterFeedback";
 import ScrollToTop from "./utils/ScrollToTop";
 
 const App: React.FC = () => {
@@ -26,6 +27,7 @@ const App: React.FC = () => {
         <Route path="/experience" element={<Experience />} />
         <Route path="/news" element={<News />} />
         <Route path="/contact" element={<Contact />} />
+        <Route path="/poster-feedback" element={<PosterFeedback />} />
       </Routes>
       <Footer />
     </ThemeProvider>
