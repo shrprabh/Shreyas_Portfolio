@@ -238,6 +238,25 @@ const News: React.FC = () => {
   // Timeline of events and updates
   const newsItems: NewsItem[] = [
     {
+      date: "August 8, 2025 (9 a.m. – 5 p.m. PDT)",
+      title: "Accelerating and Scaling Python for HPC",
+      location: "In-person (Berkeley, CA) with limited remote attendance",
+      description:
+        "Full-day, hands-on tutorial on programming GPU-accelerated supercomputers with Python. Covered CuPy for drop-in NumPy acceleration, nvmath-python for NVIDIA math libraries, Numba for custom GPU kernels, and mpi4py for multi-node scaling—plus profiling and debugging practices. Designed for scientists and engineers to optimize HPC workflows; computing resources prioritized for current NERSC users.",
+      type: "hackathon",
+      tags: [
+        "Python",
+        "GPU",
+        "HPC",
+        "CuPy",
+        "Numba",
+        "mpi4py",
+        "nvmath-python",
+        "NERSC",
+        "Workshop",
+      ],
+    },
+    {
       date: "August 5, 2025",
       title: "2025 CS Summer Poster Session",
       location: "Berkeley, California",
@@ -251,6 +270,15 @@ const News: React.FC = () => {
         "Performance Data",
         "Mentors",
       ],
+    },
+    {
+      date: "July 2 & 9 (Prep), July 16-18, 2025",
+      title: "NERSC Open Hackathon (with NVIDIA & OpenACC)",
+      location: "Hybrid (Virtual + On-site at NERSC)",
+      description:
+        "Participated in the NERSC Open Hackathon, part of the Open Hackathons series. Worked with mentors to port, accelerate, and optimize HPC scientific codes on CPU/GPU architectures. Event format included prep days (July 2 and 9) followed by a 3-day intensive (July 16–18) with daily scrums and final presentations.",
+      type: "hackathon",
+      tags: ["NERSC", "Open Hackathon", "GPU", "HPC", "OpenACC", "Performance"],
     },
     {
       date: "May 19-24, 2025",

@@ -210,32 +210,27 @@ const Contact: React.FC = () => {
     });
   };
 
-  const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
+  const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
-    console.log("Form submitted:", formState);
-
-    // Create mailto URL with form data
-    const subject = encodeURIComponent(formState.subject);
-    const body = encodeURIComponent(
-      `Name: ${formState.name}\nEmail: ${formState.email}\n\n${formState.message}`
-    );
-
-    // Open default mail client with pre-filled data
-    window.location.href = `mailto:shreyas.prabhakar@icloud.com?subject=${subject}&body=${body}`;
-
-    // Show success message
-    setIsSubmitted(true);
-
-    // Reset form and success message after email client opens
-    setTimeout(() => {
-      setFormState({
-        name: "",
-        email: "",
-        subject: "",
-        message: "",
+    try {
+      const res = await fetch("https://formspree.io/f/mnnzwkey", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+          Accept: "application/json",
+        },
+        body: JSON.stringify(formState),
       });
-      setIsSubmitted(false);
-    }, 5000);
+      if (res.ok) {
+        setIsSubmitted(true);
+        setFormState({ name: "", email: "", subject: "", message: "" });
+        setTimeout(() => setIsSubmitted(false), 5000);
+      } else {
+        console.error("Formspree error", await res.text());
+      }
+    } catch (err) {
+      console.error("Submission failed", err);
+    }
   };
 
   return (
@@ -394,9 +389,9 @@ const Contact: React.FC = () => {
                   animate={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0.3 }}
                 >
-                  Thank you! Your email client should be opening with your
-                  message details. If it doesn't open automatically, please
-                  contact me directly at shreyas.prabhakar@icloud.com
+                  Thank you! Your message has been sent via Formspree. I'll get
+                  back to you soon. If you prefer, you can also email me
+                  directly at shreyas.prabhakar@icloud.com
                 </MessageSuccess>
               )}
             </Form>
