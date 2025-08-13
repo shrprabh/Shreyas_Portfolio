@@ -217,7 +217,8 @@ const Home: React.FC = () => {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5, delay: 0.2 }}
           >
-            Software Engineer & ML Enthusiast
+            Software Engineer • Researcher Assistant • Data Visualization •
+            Full‑Stack & DevOps
           </Role>
 
           <Description
@@ -225,10 +226,12 @@ const Home: React.FC = () => {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5, delay: 0.3 }}
           >
-            Passionate about growth and always learning. I specialize in
-            building exceptional applications, focused on machine learning and
-            software development with a particular interest in AI/ML
-            applications.
+            I build user‑centric software, craft data visualization tools, and
+            ship reliable full‑stack systems. Recent work at NERSC includes a
+            graphical interface for exploring performance data, backed by
+            containers and CI/CD for easy deployment and iteration. I use AI/ML
+            pragmatically, when it unlocks better user experience or insight— and
+            focus on clarity, performance, and reproducibility.
           </Description>
 
           <ButtonGroup
@@ -284,7 +287,7 @@ const LastUpdated = styled.p`
 const HomeWithUpdate: React.FC = () => (
   <>
     <Home />
-    <LastUpdated>Last updated: August 5, 2025</LastUpdated>
+    <LastUpdated>Last updated: August 13, 2025</LastUpdated>
   </>
 );
 

@@ -167,28 +167,32 @@ const About: React.FC = () => {
               transition={{ duration: 0.6, delay: 0.3 }}
             >
               <AboutText>
-                Hello! I'm Shreyas Prabhakar, a software engineer and machine
-                learning enthusiast based at Texas Tech. I am passionate about
-                building innovative applications that solve real-world problems.
+                I'm Shreyas Prabhakar, a software engineer focused on data
+                visualization, full‑stack development, and DevOps. I build
+                user‑centric systems that turn complex signals into clear,
+                actionable visuals. I hold an M.S. in Computer Science from
+                Texas Tech University.
               </AboutText>
               <AboutText>
-                My journey in technology began with a curiosity about how things
-                work, which led me to explore various programming languages and
-                frameworks. I've worked on projects ranging from web
-                applications to machine learning models, always seeking to
-                expand my knowledge and skills.
+                Recently at NERSC, I built a graphical interface for exploring
+                performance data and shaped it into a portable, testable tool
+                using containers and CI/CD. I work closely with domain experts
+                to understand bottlenecks, design experiments, and translate
+                results into intuitive dashboards and workflows. I use AI/ML
+                pragmatically, where it improves UX or insight.
               </AboutText>
               <AboutText>
-                I specialize in machine learning, web development, and software
-                engineering with a focus on creating clean, efficient, and
-                maintainable code. I'm constantly learning and exploring new
-                technologies to stay up-to-date with the latest industry trends.
+                My approach is end‑to‑end: from problem framing and prototyping
+                to profiling, iteration, and production. Day‑to‑day, that means
+                React/TypeScript for interfaces; Python for data work and
+                automation; and modern tooling (CI/CD, Docker, cloud) to ship
+                reliably. I value clarity, performance, and reproducibility.
               </AboutText>
               <AboutText>
-                When I'm not coding, I enjoy reading about new technologies,
-                contributing to open-source projects, and sharing knowledge with
-                the tech community. I'm always open to new challenges and
-                opportunities to grow.
+                Outside of work, I like refining small tools, reading about
+                systems and visualization, and sharing what I learn. I care
+                about building things that are understandable, measurable, and
+                genuinely useful in both academic and production settings.
               </AboutText>
             </AboutContent>
 
