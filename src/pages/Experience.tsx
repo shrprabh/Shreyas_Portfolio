@@ -327,8 +327,9 @@ const Experience: React.FC = () => {
         <ResearchInterests>
           <InterestsTitle>Research Interests</InterestsTitle>
           <InterestsList>
-            Generative AI, Data Visualization, Security & Privacy, DevOps,
-            FullStack Development, Web3 and Blockchain
+            Urban Planning & Smart Cities; real‑world applied problem solving;
+            and the intersection of Computer Science with interdisciplinary
+            fields such as transportation, public health, climate, and energy.
           </InterestsList>
         </ResearchInterests>
 
