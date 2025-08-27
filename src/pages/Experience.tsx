@@ -327,9 +327,9 @@ const Experience: React.FC = () => {
         <ResearchInterests>
           <InterestsTitle>Research Interests</InterestsTitle>
           <InterestsList>
-            Urban Planning & Smart Cities; real‑world applied problem solving;
-            and the intersection of Computer Science with interdisciplinary
-            fields such as transportation, public health, climate, and energy.
+            Artificial Intelligence & Machine Learning, High-Performance
+            Computing, Data Visualization, Blockchain & Web3, Full-Stack Web
+            Development, and DevOps & Cloud Engineering
           </InterestsList>
         </ResearchInterests>
 

@@ -202,7 +202,7 @@ const About: React.FC = () => {
               transition={{ duration: 0.6, delay: 0.3 }}
             >
               <img
-                src={process.env.PUBLIC_URL + "/images/about.jpg"}
+                src={process.env.PUBLIC_URL + "/images/aboutprofile.jpg"}
                 alt="About Shreyas Prabhakar"
               />
             </AboutImage>
